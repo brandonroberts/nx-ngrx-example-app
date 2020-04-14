@@ -3,7 +3,7 @@ import { Inject, Injectable, InjectionToken } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
-import { Book } from '@example-app/books/models';
+import { Book } from '@ngrxdev/api-interfaces';
 
 export function storageFactory() {
   return typeof window === undefined || typeof localStorage === undefined

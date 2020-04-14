@@ -7,13 +7,13 @@ import { BehaviorSubject } from 'rxjs';
 import {
   BookAuthorsComponent,
   BookDetailComponent,
-} from '@example-app/books/components';
-import { SelectedBookPageComponent } from '@example-app/books/containers';
-import { ViewBookPageComponent } from '@example-app/books/containers';
-import { ViewBookPageActions } from '@example-app/books/actions';
-import * as fromBooks from '@example-app/books/reducers';
-import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
-import { MaterialModule } from '@example-app/material';
+} from '../components';
+import { SelectedBookPageComponent } from '../containers';
+import { ViewBookPageComponent } from '../containers';
+import { ViewBookPageActions } from '../actions';
+import * as fromBooks from '../reducers';
+// import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
+import { MaterialModule } from '../material.module';
 
 describe('View Book Page', () => {
   let fixture: ComponentFixture<ViewBookPageComponent>;
@@ -35,7 +35,7 @@ describe('View Book Page', () => {
         SelectedBookPageComponent,
         BookDetailComponent,
         BookAuthorsComponent,
-        AddCommasPipe,
+        // AddCommasPipe,
       ],
     });
 

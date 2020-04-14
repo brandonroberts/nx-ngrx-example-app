@@ -4,17 +4,17 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
-import { CollectionPageActions } from '@example-app/books/actions';
+import { CollectionPageActions } from '../actions';
 import {
   BookAuthorsComponent,
   BookPreviewComponent,
   BookPreviewListComponent,
-} from '@example-app/books/components';
-import { CollectionPageComponent } from '@example-app/books/containers';
-import * as fromBooks from '@example-app/books/reducers';
-import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
-import { EllipsisPipe } from '@example-app/shared/pipes/ellipsis.pipe';
-import { MaterialModule } from '@example-app/material';
+} from '../components';
+import { CollectionPageComponent } from '../containers';
+import * as fromBooks from '../reducers';
+// import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
+// import { EllipsisPipe } from '@example-app/shared/pipes/ellipsis.pipe';
+import { MaterialModule } from '../material.module';
 
 describe('Collection Page', () => {
   let fixture: ComponentFixture<CollectionPageComponent>;
@@ -29,8 +29,8 @@ describe('Collection Page', () => {
         BookPreviewListComponent,
         BookPreviewComponent,
         BookAuthorsComponent,
-        AddCommasPipe,
-        EllipsisPipe,
+        // AddCommasPipe,
+        // EllipsisPipe,
       ],
       providers: [
         provideMockStore({

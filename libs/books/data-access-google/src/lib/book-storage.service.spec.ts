@@ -2,11 +2,11 @@ import { TestBed } from '@angular/core/testing';
 
 import { cold } from 'jasmine-marbles';
 
-import { Book } from '@example-app/books/models';
+import { Book } from '@ngrxdev/api-interfaces';
 import {
   BookStorageService,
   LOCAL_STORAGE_TOKEN,
-} from '@example-app/core/services/book-storage.service';
+} from './book-storage.service';
 
 describe('BookStorageService', () => {
   let fixture: any;

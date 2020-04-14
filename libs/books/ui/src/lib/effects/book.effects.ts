@@ -11,12 +11,12 @@ import {
   takeUntil,
 } from 'rxjs/operators';
 
-import { Book } from '../models';
+import { Book } from '@ngrxdev/api-interfaces';
 import {
   BooksApiActions,
   FindBookPageActions,
 } from '../actions';
-import { GoogleBooksService } from '@example-app/core/services';
+import { GoogleBooksService } from '@ngrxdev/books/data-access-google';
 
 /**
  * Effects offer a way to isolate and easily test side-effects within your

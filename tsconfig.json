@@ -20,7 +20,8 @@
       "@ngrxdev/books/ui": ["libs/books/ui/src/index.ts"],
       "@ngrxdev/books/data-access-google": [
         "libs/books/data-access-google/src/index.ts"
-      ]
+      ],
+      "@ngrxdev/api-interfaces": ["libs/api-interfaces/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

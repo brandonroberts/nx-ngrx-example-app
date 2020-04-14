@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 import { FindBookPageActions } from '../actions';
-import { Book } from '../models';
+import { Book } from '@ngrxdev/api-interfaces';
 import * as fromBooks from '../reducers';
 
 @Component({

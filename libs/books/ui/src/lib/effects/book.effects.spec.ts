@@ -8,10 +8,11 @@ import { Observable } from 'rxjs';
 import {
   BooksApiActions,
   FindBookPageActions,
-} from '@example-app/books/actions';
-import { BookEffects } from '@example-app/books/effects';
-import { Book } from '@example-app/books/models';
-import { GoogleBooksService } from '@example-app/core/services';
+} from '../actions';
+import { BookEffects } from '../effects';
+import { GoogleBooksService } from '@ngrxdev/books/data-access-google';
+import { Book } from '@ngrxdev/api-interfaces';
+
 
 describe('BookEffects', () => {
   let effects: BookEffects;

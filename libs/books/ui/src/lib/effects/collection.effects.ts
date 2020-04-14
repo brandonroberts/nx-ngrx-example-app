@@ -9,8 +9,9 @@ import {
   CollectionPageActions,
   SelectedBookPageActions,
 } from '../actions';
-import { Book } from '../models';
-import { BookStorageService } from '@example-app/core/services';
+import { Book } from '@ngrxdev/api-interfaces';
+import { BookStorageService } from '@ngrxdev/books/data-access-google';
+
 
 @Injectable()
 export class CollectionEffects {
@@ -29,8 +30,8 @@ export class CollectionEffects {
     { dispatch: false }
   );
 
-  loadCollection$ = createEffect(() =>
-    this.actions$.pipe(
+  loadCollection$ = createEffect(() => {
+    return this.actions$.pipe(
       ofType(CollectionPageActions.enter),
       switchMap(() =>
         this.storageService.getCollection().pipe(
@@ -43,10 +44,10 @@ export class CollectionEffects {
         )
       )
     )
-  );
+  });
 
-  addBookToCollection$ = createEffect(() =>
-    this.actions$.pipe(
+  addBookToCollection$ = createEffect(() => {
+    return this.actions$.pipe(
       ofType(SelectedBookPageActions.addBook),
       mergeMap(({ book }) =>
         this.storageService.addToCollection([book]).pipe(
@@ -55,10 +56,10 @@ export class CollectionEffects {
         )
       )
     )
-  );
+  });
 
-  removeBookFromCollection$ = createEffect(() =>
-    this.actions$.pipe(
+  removeBookFromCollection$ = createEffect(() => {
+    return this.actions$.pipe(
       ofType(SelectedBookPageActions.removeBook),
       mergeMap(({ book }) =>
         this.storageService.removeFromCollection([book.id]).pipe(
@@ -66,8 +67,8 @@ export class CollectionEffects {
           catchError(() => of(CollectionApiActions.removeBookFailure({ book })))
         )
       )
-    )
-  );
+    ) 
+  });
 
   constructor(
     private actions$: Actions,

@@ -1,1 +1,2 @@
-export * from './lib/books-data-access-google.module';
+export * from './lib/google-books.service';
+export * from './lib/book-storage.service';

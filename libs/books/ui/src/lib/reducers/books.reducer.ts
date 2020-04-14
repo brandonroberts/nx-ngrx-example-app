@@ -7,7 +7,7 @@ import {
   CollectionApiActions,
   ViewBookPageActions,
 } from '../actions';
-import { Book } from '../models';
+import { Book } from '@ngrxdev/api-interfaces';
 
 export const booksFeatureKey = 'books';
 

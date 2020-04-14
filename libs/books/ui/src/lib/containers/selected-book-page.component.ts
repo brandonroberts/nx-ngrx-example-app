@@ -4,7 +4,7 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { SelectedBookPageActions } from '../actions';
-import { Book } from '../models';
+import { Book } from '@ngrxdev/api-interfaces';
 import * as fromBooks from '../reducers';
 
 @Component({

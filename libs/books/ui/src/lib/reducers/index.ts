@@ -1,4 +1,4 @@
-import { Book } from '../models';
+import { Book } from '@ngrxdev/api-interfaces';
 import {
   createSelector,
   createFeatureSelector,
@@ -8,7 +8,7 @@ import {
 import * as fromSearch from '../reducers/search.reducer';
 import * as fromBooks from '../reducers/books.reducer';
 import * as fromCollection from '../reducers/collection.reducer';
-import * as fromRoot from '@example-app/reducers';
+// import * as fromRoot from '@example-app/reducers';
 
 export const booksFeatureKey = 'books';
 
@@ -18,7 +18,7 @@ export interface BooksState {
   [fromCollection.collectionFeatureKey]: fromCollection.State;
 }
 
-export interface State extends fromRoot.State {
+export interface State {
   [booksFeatureKey]: BooksState;
 }
 

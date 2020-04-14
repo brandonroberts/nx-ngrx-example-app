@@ -3,16 +3,16 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
-import { SelectedBookPageActions } from '@example-app/books/actions';
+import { SelectedBookPageActions } from '../actions';
 import {
   BookAuthorsComponent,
   BookDetailComponent,
-} from '@example-app/books/components';
-import { SelectedBookPageComponent } from '@example-app/books/containers';
-import { Book, generateMockBook } from '@example-app/books/models';
-import * as fromBooks from '@example-app/books/reducers';
-import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
-import { MaterialModule } from '@example-app/material';
+} from '../components';
+import { SelectedBookPageComponent } from '../containers';
+import { Book, generateMockBook } from '@ngrxdev/api-interfaces';
+import * as fromBooks from '../reducers';
+// import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
+import { MaterialModule } from '../material.module';
 
 describe('Selected Book Page', () => {
   let fixture: ComponentFixture<SelectedBookPageComponent>;
@@ -26,7 +26,7 @@ describe('Selected Book Page', () => {
         SelectedBookPageComponent,
         BookDetailComponent,
         BookAuthorsComponent,
-        AddCommasPipe,
+        // AddCommasPipe,
       ],
       providers: [provideMockStore()],
     });

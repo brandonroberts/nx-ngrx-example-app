@@ -6,15 +6,13 @@ import {
   SelectedBookPageActions,
 } from '../actions';
 import { CollectionEffects } from '../effects';
-import { Book } from '../models';
-import {
-  BookStorageService,
-  LOCAL_STORAGE_TOKEN,
-} from '@example-app/core/services';
+
 import { Actions } from '@ngrx/effects';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { cold, hot } from 'jasmine-marbles';
 import { Observable } from 'rxjs';
+import { Book } from '@ngrxdev/api-interfaces';
+import { BookStorageService, LOCAL_STORAGE_TOKEN } from '@ngrxdev/books/data-access-google';
 
 describe('CollectionEffects', () => {
   let db: any;

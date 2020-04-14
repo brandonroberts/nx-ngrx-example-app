@@ -21,8 +21,8 @@ import {
 import { BookEffects, CollectionEffects } from './effects';
 
 import * as fromBooks from './reducers';
-import { MaterialModule } from '@example-app/material';
-import { PipesModule } from '@example-app/shared/pipes';
+import { MaterialModule } from './material.module';
+// import { PipesModule } from '@example-app/shared/pipes';
 
 export const COMPONENTS = [
   BookAuthorsComponent,
@@ -62,7 +62,7 @@ export const CONTAINERS = [
      * whether they are registered once or multiple times.
      */
     EffectsModule.forFeature([BookEffects, CollectionEffects]),
-    PipesModule,
+    // PipesModule,
   ],
   declarations: [COMPONENTS, CONTAINERS],
 })
