@@ -18,5 +18,19 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "example-app": {
+      "tags": []
+    },
+    "example-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["example-app"]
+    },
+    "books-ui": {
+      "tags": []
+    },
+    "books-data-access-google": {
+      "tags": []
+    }
+  }
 }
