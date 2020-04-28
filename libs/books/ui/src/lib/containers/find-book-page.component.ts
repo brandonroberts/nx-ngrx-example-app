@@ -4,9 +4,8 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 
-import { FindBookPageActions } from '../actions';
+import { FindBookPageActions, BooksFeature } from '@ngrxdev/shared/state/books';
 import { Book } from '@ngrxdev/api-interfaces';
-import * as fromBooks from '../reducers';
 
 @Component({
   selector: 'bc-find-book-page',
@@ -29,14 +28,14 @@ export class FindBookPageComponent {
   loading$: Observable<boolean>;
   error$: Observable<string>;
 
-  constructor(private store: Store<fromBooks.State>) {
+  constructor(private store: Store) {
     this.searchQuery$ = store.pipe(
-      select(fromBooks.selectSearchQuery),
+      select(BooksFeature.selectSearchQuery),
       take(1)
     );
-    this.books$ = store.pipe(select(fromBooks.selectSearchResults));
-    this.loading$ = store.pipe(select(fromBooks.selectSearchLoading));
-    this.error$ = store.pipe(select(fromBooks.selectSearchError));
+    this.books$ = store.pipe(select(BooksFeature.selectSearchResults));
+    this.loading$ = store.pipe(select(BooksFeature.selectSearchLoading));
+    this.error$ = store.pipe(select(BooksFeature.selectSearchError));
   }
 
   search(query: string) {

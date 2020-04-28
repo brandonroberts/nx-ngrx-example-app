@@ -3,14 +3,14 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
-import { SelectedBookPageActions } from '../actions';
+import { SelectedBookPageActions } from '../../../../../shared/state/books/src/lib/actions';
 import {
   BookAuthorsComponent,
   BookDetailComponent,
 } from '../components';
 import { SelectedBookPageComponent } from '../containers';
 import { Book, generateMockBook } from '@ngrxdev/api-interfaces';
-import * as fromBooks from '../reducers';
+import * as fromBooks from '../../../../../shared/state/books/src/lib/reducers';
 // import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
 import { MaterialModule } from '../material.module';
 

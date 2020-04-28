@@ -4,8 +4,7 @@ import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import * as fromBooks from '../reducers';
-import { ViewBookPageActions } from '../actions';
+import { ViewBookPageActions, BooksFeature } from '@ngrxdev/shared/state/books';
 
 /**
  * Note: Container components are also reusable. Whether or not
@@ -27,7 +26,7 @@ import { ViewBookPageActions } from '../actions';
 export class ViewBookPageComponent implements OnDestroy {
   actionsSubscription: Subscription;
 
-  constructor(store: Store<fromBooks.State>, route: ActivatedRoute) {
+  constructor(store: Store<BooksFeature.State>, route: ActivatedRoute) {
     this.actionsSubscription = route.params
       .pipe(map(params => ViewBookPageActions.selectBook({ id: params.id })))
       .subscribe(action => store.dispatch(action));

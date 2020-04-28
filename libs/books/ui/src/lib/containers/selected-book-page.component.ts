@@ -3,9 +3,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { SelectedBookPageActions } from '../actions';
+import { SelectedBookPageActions, BooksFeature } from '@ngrxdev/shared/state/books';
 import { Book } from '@ngrxdev/api-interfaces';
-import * as fromBooks from '../reducers';
 
 @Component({
   selector: 'bc-selected-book-page',
@@ -23,12 +22,12 @@ export class SelectedBookPageComponent {
   book$: Observable<Book>;
   isSelectedBookInCollection$: Observable<boolean>;
 
-  constructor(private store: Store<fromBooks.State>) {
-    this.book$ = store.pipe(select(fromBooks.selectSelectedBook)) as Observable<
+  constructor(private store: Store<BooksFeature.State>) {
+    this.book$ = store.pipe(select(BooksFeature.selectSelectedBook)) as Observable<
       Book
     >;
     this.isSelectedBookInCollection$ = store.pipe(
-      select(fromBooks.isSelectedBookInCollection)
+      select(BooksFeature.isSelectedBookInCollection)
     );
   }
 

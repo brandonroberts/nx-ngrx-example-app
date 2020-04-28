@@ -5,7 +5,7 @@ import {
   CollectionPageActions,
   SelectedBookPageActions,
 } from '../actions';
-import { CollectionEffects } from '../effects';
+import { CollectionEffects } from '.';
 
 import { Actions } from '@ngrx/effects';
 import { provideMockActions } from '@ngrx/effects/testing';

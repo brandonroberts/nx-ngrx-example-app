@@ -4,9 +4,7 @@ import { select, Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 import { catchError, filter, map, switchMap, take, tap } from 'rxjs/operators';
 
-
-import { BookActions } from '../actions';
-import * as fromBooks from '../reducers';
+import { BookActions, BooksFeature } from '@ngrxdev/shared/state/books';
 import { GoogleBooksService } from '@ngrxdev/books/data-access-google';
 
 /**
@@ -19,7 +17,7 @@ import { GoogleBooksService } from '@ngrxdev/books/data-access-google';
 })
 export class BookExistsGuard implements CanActivate {
   constructor(
-    private store: Store<fromBooks.State>,
+    private store: Store<BooksFeature.State>,
     private googleBooks: GoogleBooksService,
     private router: Router
   ) {}
@@ -31,7 +29,7 @@ export class BookExistsGuard implements CanActivate {
    */
   waitForCollectionToLoad(): Observable<boolean> {
     return this.store.pipe(
-      select(fromBooks.selectCollectionLoaded),
+      select(BooksFeature.selectCollectionLoaded),
       filter(loaded => loaded),
       take(1)
     );
@@ -43,7 +41,7 @@ export class BookExistsGuard implements CanActivate {
    */
   hasBookInStore(id: string): Observable<boolean> {
     return this.store.pipe(
-      select(fromBooks.selectBookEntities),
+      select(BooksFeature.selectBookEntities),
       map(entities => !!entities[id]),
       take(1)
     );

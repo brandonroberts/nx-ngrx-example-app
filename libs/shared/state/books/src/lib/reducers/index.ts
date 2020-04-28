@@ -5,9 +5,9 @@ import {
   combineReducers,
   Action,
 } from '@ngrx/store';
-import * as fromSearch from '../reducers/search.reducer';
-import * as fromBooks from '../reducers/books.reducer';
-import * as fromCollection from '../reducers/collection.reducer';
+import * as fromSearch from './search.reducer';
+import * as fromBooks from './books.reducer';
+import * as fromCollection from './collection.reducer';
 // import * as fromRoot from '@example-app/reducers';
 
 export const booksFeatureKey = 'books';

@@ -1,12 +1,12 @@
-import { reducer } from '../reducers/books.reducer';
-import * as fromBooks from '../reducers/books.reducer';
+import { reducer } from './books.reducer';
+import * as fromBooks from './books.reducer';
 import {
   BooksApiActions,
   BookActions,
   ViewBookPageActions,
   CollectionApiActions,
 } from '../actions';
-import { Book, generateMockBook } from '../models';
+import { Book, generateMockBook } from '@ngrxdev/api-interfaces';
 
 describe('BooksReducer', () => {
   const book1 = generateMockBook();

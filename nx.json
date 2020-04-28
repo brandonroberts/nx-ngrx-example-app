@@ -37,6 +37,9 @@
     },
     "shared-ui": {
       "tags": []
+    },
+    "shared-state-books": {
+      "tags": []
     }
   }
 }

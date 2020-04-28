@@ -3,9 +3,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { CollectionPageActions } from '../actions';
+import { CollectionPageActions, BooksFeature } from '@ngrxdev/shared/state/books';
 import { Book } from '@ngrxdev/api-interfaces';
-import * as fromBooks from '../reducers';
 
 @Component({
   selector: 'bc-collection-page',
@@ -35,8 +34,8 @@ import * as fromBooks from '../reducers';
 export class CollectionPageComponent implements OnInit {
   books$: Observable<Book[]>;
 
-  constructor(private store: Store<fromBooks.State>) {
-    this.books$ = store.pipe(select(fromBooks.selectBookCollection));
+  constructor(private store: Store<BooksFeature.State>) {
+    this.books$ = store.pipe(select(BooksFeature.selectBookCollection));
   }
 
   ngOnInit() {

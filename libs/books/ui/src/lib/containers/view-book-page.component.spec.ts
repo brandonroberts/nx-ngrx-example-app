@@ -10,8 +10,8 @@ import {
 } from '../components';
 import { SelectedBookPageComponent } from '../containers';
 import { ViewBookPageComponent } from '../containers';
-import { ViewBookPageActions } from '../actions';
-import * as fromBooks from '../reducers';
+import { ViewBookPageActions } from '../../../../../shared/state/books/src/lib/actions';
+import * as fromBooks from '../../../../../shared/state/books/src/lib/reducers';
 // import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
 import { MaterialModule } from '../material.module';
 

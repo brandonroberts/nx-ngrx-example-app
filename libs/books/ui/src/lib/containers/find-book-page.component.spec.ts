@@ -5,7 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
-import { FindBookPageActions } from '../actions';
+import { FindBookPageActions, BooksFeature } from '@ngrxdev/shared/state/books';
 import {
   BookAuthorsComponent,
   BookPreviewComponent,
@@ -13,7 +13,6 @@ import {
   BookSearchComponent,
 } from '../components';
 import { FindBookPageComponent } from '../containers';
-import * as fromBooks from '../reducers';
 // import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
 // import { EllipsisPipe } from '@example-app/shared/pipes/ellipsis.pipe';
 import { MaterialModule } from '../material.module';
@@ -37,16 +36,16 @@ describe('Find Book Page', () => {
         BookPreviewComponent,
         BookPreviewListComponent,
         BookAuthorsComponent,
-        AddCommasPipe,
-        EllipsisPipe,
+        // AddCommasPipe,
+        // EllipsisPipe,
       ],
       providers: [
         provideMockStore({
           selectors: [
-            { selector: fromBooks.selectSearchQuery, value: '' },
-            { selector: fromBooks.selectSearchResults, value: [] },
-            { selector: fromBooks.selectSearchLoading, value: false },
-            { selector: fromBooks.selectSearchError, value: '' },
+            { selector: BooksFeature.selectSearchQuery, value: '' },
+            { selector: BooksFeature.selectSearchResults, value: [] },
+            { selector: BooksFeature.selectSearchLoading, value: false },
+            { selector: BooksFeature.selectSearchError, value: '' },
           ],
         }),
       ],

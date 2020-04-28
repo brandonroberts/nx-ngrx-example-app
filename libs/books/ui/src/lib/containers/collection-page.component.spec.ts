@@ -4,14 +4,14 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
-import { CollectionPageActions } from '../actions';
+import { CollectionPageActions } from '../../../../../shared/state/books/src/lib/actions';
 import {
   BookAuthorsComponent,
   BookPreviewComponent,
   BookPreviewListComponent,
 } from '../components';
 import { CollectionPageComponent } from '../containers';
-import * as fromBooks from '../reducers';
+import * as fromBooks from '../../../../../shared/state/books/src/lib/reducers';
 // import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
 // import { EllipsisPipe } from '@example-app/shared/pipes/ellipsis.pipe';
 import { MaterialModule } from '../material.module';

@@ -9,7 +9,7 @@ import {
   BooksApiActions,
   FindBookPageActions,
 } from '../actions';
-import { BookEffects } from '../effects';
+import { BookEffects } from '.';
 import { GoogleBooksService } from '@ngrxdev/books/data-access-google';
 import { Book } from '@ngrxdev/api-interfaces';
 
