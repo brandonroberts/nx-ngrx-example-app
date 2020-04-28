@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Book } from '@example-app/books/models';
+import { Book } from '@ngrxdev/api-interfaces';
 
 @Injectable({
   providedIn: 'root',

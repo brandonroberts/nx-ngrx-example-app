@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
+import { PipesModule } from '@ngrxdev/shared/ui';
+
 import { BooksRoutingModule } from './books-routing.module';
 import {
   BookAuthorsComponent,
@@ -62,7 +64,7 @@ export const CONTAINERS = [
      * whether they are registered once or multiple times.
      */
     EffectsModule.forFeature([BookEffects, CollectionEffects]),
-    // PipesModule,
+    PipesModule,
   ],
   declarations: [COMPONENTS, CONTAINERS],
 })
