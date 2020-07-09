@@ -79,7 +79,7 @@
               "apps/example-app/tsconfig.app.json",
               "apps/example-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/example-app/**"]
+            "exclude": ["**/node_modules/**", "!apps/example-app/**/*"]
           }
         },
         "test": {
@@ -115,7 +115,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": ["apps/example-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/example-app-e2e/**"]
+            "exclude": ["**/node_modules/**", "!apps/example-app-e2e/**/*"]
           }
         }
       }
@@ -133,7 +133,7 @@
               "libs/books/ui/tsconfig.lib.json",
               "libs/books/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/books/ui/**"]
+            "exclude": ["**/node_modules/**", "!libs/books/ui/**/*"]
           }
         },
         "test": {
@@ -163,7 +163,7 @@
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/books/data-access-google/**"
+              "!libs/books/data-access-google/**/*"
             ]
           }
         },
@@ -192,7 +192,7 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
+            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**/*"]
           }
         },
         "test": {
@@ -220,7 +220,7 @@
               "libs/shared/ui/tsconfig.lib.json",
               "libs/shared/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/ui/**"]
+            "exclude": ["**/node_modules/**", "!libs/shared/ui/**/*"]
           }
         },
         "test": {
@@ -248,7 +248,7 @@
               "libs/shared/state/books/tsconfig.lib.json",
               "libs/shared/state/books/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/state/books/**"]
+            "exclude": ["**/node_modules/**", "!libs/shared/state/books/**/*"]
           }
         },
         "test": {
