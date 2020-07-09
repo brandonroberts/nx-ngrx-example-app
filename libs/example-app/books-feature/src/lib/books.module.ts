@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { PipesModule } from '@ngrxdev/example-app/shared/ui';
+import { ExampleAppSharedUiModule } from '@ngrxdev/example-app/shared/ui';
 
 import { BooksRoutingModule } from './books-routing.module';
 import {
@@ -42,7 +42,7 @@ export const CONTAINERS = [
     MaterialModule,
     BooksRoutingModule,
     ExampleAppSharedStateBooksModule,
-    PipesModule,
+    ExampleAppSharedUiModule,
   ],
   declarations: [COMPONENTS, CONTAINERS],
 })

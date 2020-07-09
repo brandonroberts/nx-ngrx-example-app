@@ -4,17 +4,17 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
-import { CollectionPageActions } from '../../../../../shared/state/books/src/lib/actions';
+import { CollectionPageActions, BooksFeature } from '@ngrxdev/example-app/shared/state/books';
 import {
   BookAuthorsComponent,
   BookPreviewComponent,
   BookPreviewListComponent,
 } from '../components';
 import { CollectionPageComponent } from '../containers';
-import * as fromBooks from '../../../../../shared/state/books/src/lib/reducers';
 // import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
 // import { EllipsisPipe } from '@example-app/shared/pipes/ellipsis.pipe';
 import { MaterialModule } from '../material.module';
+import { ExampleAppSharedUiModule } from '@ngrxdev/example-app/shared/ui';
 
 describe('Collection Page', () => {
   let fixture: ComponentFixture<CollectionPageComponent>;
@@ -23,18 +23,16 @@ describe('Collection Page', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule, MaterialModule, RouterTestingModule],
+      imports: [NoopAnimationsModule, MaterialModule, RouterTestingModule, ExampleAppSharedUiModule],
       declarations: [
         CollectionPageComponent,
         BookPreviewListComponent,
         BookPreviewComponent,
         BookAuthorsComponent,
-        // AddCommasPipe,
-        // EllipsisPipe,
       ],
       providers: [
         provideMockStore({
-          selectors: [{ selector: fromBooks.selectBookCollection, value: [] }],
+          selectors: [{ selector: BooksFeature.selectBookCollection, value: [] }],
         }),
       ],
     });

@@ -10,10 +10,10 @@ import {
 } from '../components';
 import { SelectedBookPageComponent } from '../containers';
 import { ViewBookPageComponent } from '../containers';
-import { ViewBookPageActions } from '../../../../../shared/state/books/src/lib/actions';
-import * as fromBooks from '../../../../../shared/state/books/src/lib/reducers';
-// import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
+import { ViewBookPageActions } from '@ngrxdev/example-app/shared/state/books';
+
 import { MaterialModule } from '../material.module';
+import { ExampleAppSharedUiModule } from '@ngrxdev/example-app/shared/ui';
 
 describe('View Book Page', () => {
   let fixture: ComponentFixture<ViewBookPageComponent>;
@@ -22,7 +22,7 @@ describe('View Book Page', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [MaterialModule],
+      imports: [MaterialModule, ExampleAppSharedUiModule],
       providers: [
         {
           provide: ActivatedRoute,

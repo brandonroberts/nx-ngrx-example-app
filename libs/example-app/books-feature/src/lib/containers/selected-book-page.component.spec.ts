@@ -3,16 +3,15 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 
-import { SelectedBookPageActions } from '../../../../../shared/state/books/src/lib/actions';
+import { SelectedBookPageActions } from '@ngrxdev/example-app/shared/state/books';
 import {
   BookAuthorsComponent,
   BookDetailComponent,
 } from '../components';
 import { SelectedBookPageComponent } from '../containers';
 import { Book, generateMockBook } from '@ngrxdev/api-interfaces';
-import * as fromBooks from '../../../../../shared/state/books/src/lib/reducers';
-// import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
 import { MaterialModule } from '../material.module';
+import { ExampleAppSharedUiModule } from '@ngrxdev/example-app/shared/ui';
 
 describe('Selected Book Page', () => {
   let fixture: ComponentFixture<SelectedBookPageComponent>;
@@ -21,12 +20,11 @@ describe('Selected Book Page', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule, MaterialModule],
+      imports: [NoopAnimationsModule, MaterialModule, ExampleAppSharedUiModule],
       declarations: [
         SelectedBookPageComponent,
         BookDetailComponent,
         BookAuthorsComponent,
-        // AddCommasPipe,
       ],
       providers: [provideMockStore()],
     });

@@ -13,9 +13,9 @@ import {
   BookSearchComponent,
 } from '../components';
 import { FindBookPageComponent } from '../containers';
-// import { AddCommasPipe } from '@example-app/shared/pipes/add-commas.pipe';
-// import { EllipsisPipe } from '@example-app/shared/pipes/ellipsis.pipe';
+
 import { MaterialModule } from '../material.module';
+import { ExampleAppSharedUiModule } from '@ngrxdev/example-app/shared/ui';
 
 describe('Find Book Page', () => {
   let fixture: ComponentFixture<FindBookPageComponent>;
@@ -29,6 +29,7 @@ describe('Find Book Page', () => {
         RouterTestingModule,
         MaterialModule,
         ReactiveFormsModule,
+        ExampleAppSharedUiModule
       ],
       declarations: [
         FindBookPageComponent,
@@ -36,8 +37,6 @@ describe('Find Book Page', () => {
         BookPreviewComponent,
         BookPreviewListComponent,
         BookAuthorsComponent,
-        // AddCommasPipe,
-        // EllipsisPipe,
       ],
       providers: [
         provideMockStore({
