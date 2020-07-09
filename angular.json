@@ -21,7 +21,9 @@
               "apps/example-app/src/favicon.ico",
               "apps/example-app/src/assets"
             ],
-            "styles": ["apps/example-app/src/styles.css"],
+            "styles": [
+              "apps/example-app/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -79,7 +81,10 @@
               "apps/example-app/tsconfig.app.json",
               "apps/example-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/example-app/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/example-app/**/*"
+            ]
           }
         },
         "test": {
@@ -114,70 +119,16 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/example-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/example-app-e2e/**/*"]
-          }
-        }
-      }
-    },
-    "books-ui": {
-      "projectType": "library",
-      "root": "libs/books/ui",
-      "sourceRoot": "libs/books/ui/src",
-      "prefix": "ngrxdev",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
             "tsConfig": [
-              "libs/books/ui/tsconfig.lib.json",
-              "libs/books/ui/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/books/ui/**/*"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/books/ui/jest.config.js",
-            "tsConfig": "libs/books/ui/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/books/ui/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {}
-    },
-    "books-data-access-google": {
-      "projectType": "library",
-      "root": "libs/books/data-access-google",
-      "sourceRoot": "libs/books/data-access-google/src",
-      "prefix": "ngrxdev",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/books/data-access-google/tsconfig.lib.json",
-              "libs/books/data-access-google/tsconfig.spec.json"
+              "apps/example-app-e2e/tsconfig.e2e.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!libs/books/data-access-google/**/*"
+              "!apps/example-app-e2e/**/*"
             ]
           }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/books/data-access-google/jest.config.js",
-            "tsConfig": "libs/books/data-access-google/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/books/data-access-google/src/test-setup.ts"
-          }
         }
-      },
-      "schematics": {}
+      }
     },
     "api-interfaces": {
       "projectType": "library",
@@ -192,7 +143,10 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-interfaces/**/*"
+            ]
           }
         },
         "test": {
@@ -207,57 +161,125 @@
       },
       "schematics": {}
     },
-    "shared-ui": {
+    "example-app-books-feature": {
       "projectType": "library",
-      "root": "libs/shared/ui",
-      "sourceRoot": "libs/shared/ui/src",
+      "root": "libs/example-app/books-feature",
+      "sourceRoot": "libs/example-app/books-feature/src",
       "prefix": "ngrxdev",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/shared/ui/tsconfig.lib.json",
-              "libs/shared/ui/tsconfig.spec.json"
+              "libs/example-app/books-feature/tsconfig.lib.json",
+              "libs/example-app/books-feature/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/ui/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/books-feature/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/shared/ui/jest.config.js",
-            "tsConfig": "libs/shared/ui/tsconfig.spec.json",
+            "jestConfig": "libs/example-app/books-feature/jest.config.js",
+            "tsConfig": "libs/example-app/books-feature/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/shared/ui/src/test-setup.ts"
+            "setupFile": "libs/example-app/books-feature/src/test-setup.ts"
           }
         }
       },
       "schematics": {}
     },
-    "shared-state-books": {
+    "example-app-data-access-books": {
       "projectType": "library",
-      "root": "libs/shared/state/books",
-      "sourceRoot": "libs/shared/state/books/src",
+      "root": "libs/example-app/data-access/books",
+      "sourceRoot": "libs/example-app/data-access/books/src",
       "prefix": "ngrxdev",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/shared/state/books/tsconfig.lib.json",
-              "libs/shared/state/books/tsconfig.spec.json"
+              "libs/example-app/data-access/books/tsconfig.lib.json",
+              "libs/example-app/data-access/books/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/state/books/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/data-access/books/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/shared/state/books/jest.config.js",
-            "tsConfig": "libs/shared/state/books/tsconfig.spec.json",
+            "jestConfig": "libs/example-app/data-access/books/jest.config.js",
+            "tsConfig": "libs/example-app/data-access/books/tsconfig.spec.json",
             "passWithNoTests": true,
-            "setupFile": "libs/shared/state/books/src/test-setup.ts"
+            "setupFile": "libs/example-app/data-access/books/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "example-app-shared-state-books": {
+      "projectType": "library",
+      "root": "libs/example-app/shared/state/books",
+      "sourceRoot": "libs/example-app/shared/state/books/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/shared/state/books/tsconfig.lib.json",
+              "libs/example-app/shared/state/books/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/shared/state/books/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/shared/state/books/jest.config.js",
+            "tsConfig": "libs/example-app/shared/state/books/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/shared/state/books/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "example-app-shared-ui": {
+      "projectType": "library",
+      "root": "libs/example-app/shared/ui",
+      "sourceRoot": "libs/example-app/shared/ui/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/shared/ui/tsconfig.lib.json",
+              "libs/example-app/shared/ui/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/shared/ui/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/shared/ui/jest.config.js",
+            "tsConfig": "libs/example-app/shared/ui/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/shared/ui/src/test-setup.ts"
           }
         }
       },
