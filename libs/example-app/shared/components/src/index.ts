@@ -1,0 +1,1 @@
+export * from './lib/logout-confirmation-dialog.component';

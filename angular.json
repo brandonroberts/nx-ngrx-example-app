@@ -21,9 +21,7 @@
               "apps/example-app/src/favicon.ico",
               "apps/example-app/src/assets"
             ],
-            "styles": [
-              "apps/example-app/src/styles.css"
-            ],
+            "styles": ["apps/example-app/src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -81,10 +79,7 @@
               "apps/example-app/tsconfig.app.json",
               "apps/example-app/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/example-app/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/example-app/**/*"]
           }
         },
         "test": {
@@ -119,13 +114,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/example-app-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/example-app-e2e/**/*"
-            ]
+            "tsConfig": ["apps/example-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/example-app-e2e/**/*"]
           }
         }
       }
@@ -143,10 +133,7 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/api-interfaces/**/*"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**/*"]
           }
         },
         "test": {
@@ -280,6 +267,130 @@
             "tsConfig": "libs/example-app/shared/ui/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/example-app/shared/ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "example-app-shared-state-auth": {
+      "projectType": "library",
+      "root": "libs/example-app/shared/state/auth",
+      "sourceRoot": "libs/example-app/shared/state/auth/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/shared/state/auth/tsconfig.lib.json",
+              "libs/example-app/shared/state/auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/shared/state/auth/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/shared/state/auth/jest.config.js",
+            "tsConfig": "libs/example-app/shared/state/auth/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/shared/state/auth/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "example-app-auth-feature-auth": {
+      "projectType": "library",
+      "root": "libs/example-app/auth-feature/auth",
+      "sourceRoot": "libs/example-app/auth-feature/auth/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/auth-feature/auth/tsconfig.lib.json",
+              "libs/example-app/auth-feature/auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/auth-feature/auth/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/auth-feature/auth/jest.config.js",
+            "tsConfig": "libs/example-app/auth-feature/auth/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/auth-feature/auth/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "example-app-data-access-auth": {
+      "projectType": "library",
+      "root": "libs/example-app/data-access/auth",
+      "sourceRoot": "libs/example-app/data-access/auth/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/data-access/auth/tsconfig.lib.json",
+              "libs/example-app/data-access/auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/data-access/auth/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/data-access/auth/jest.config.js",
+            "tsConfig": "libs/example-app/data-access/auth/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/data-access/auth/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "example-app-shared-components": {
+      "projectType": "library",
+      "root": "libs/example-app/shared/components",
+      "sourceRoot": "libs/example-app/shared/components/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/shared/components/tsconfig.lib.json",
+              "libs/example-app/shared/components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/shared/components/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/shared/components/jest.config.js",
+            "tsConfig": "libs/example-app/shared/components/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/shared/components/src/test-setup.ts"
           }
         }
       },

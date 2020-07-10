@@ -1,7 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
 
 import { LayoutActions } from '@example-app/core/actions';
-import { AuthActions } from '@example-app/auth/actions';
+import { AuthActions } from '@ngrxdev/example-app/shared/state/auth';
+
 
 export const layoutFeatureKey = 'layout';
 

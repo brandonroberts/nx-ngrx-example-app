@@ -10,23 +10,14 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@example-app/*": [
-        "./apps/example-app/src/app/*"
-      ],
-      "@ngrxdev/api-interfaces": [
-        "libs/api-interfaces/src/index.ts"
-      ],
+      "@example-app/*": ["./apps/example-app/src/app/*"],
+      "@ngrxdev/api-interfaces": ["libs/api-interfaces/src/index.ts"],
       "@ngrxdev/example-app/books-feature": [
         "libs/example-app/books-feature/src/index.ts"
       ],
@@ -38,11 +29,20 @@
       ],
       "@ngrxdev/example-app/shared/ui": [
         "libs/example-app/shared/ui/src/index.ts"
+      ],
+      "@ngrxdev/example-app/shared/state/auth": [
+        "libs/example-app/shared/state/auth/src/index.ts"
+      ],
+      "@ngrxdev/example-app/auth-feature/auth": [
+        "libs/example-app/auth-feature/auth/src/index.ts"
+      ],
+      "@ngrxdev/example-app/data-access/auth": [
+        "libs/example-app/data-access/auth/src/index.ts"
+      ],
+      "@ngrxdev/example-app/shared/components": [
+        "libs/example-app/shared/components/src/index.ts"
       ]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

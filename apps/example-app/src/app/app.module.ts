@@ -9,7 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule, RouterState } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { AuthModule } from '@example-app/auth';
+import { AuthModule } from '@ngrxdev/example-app/auth-feature/auth';
 
 import { ROOT_REDUCERS, metaReducers } from '@example-app/reducers';
 

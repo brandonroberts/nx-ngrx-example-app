@@ -2,10 +2,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { AuthActions } from '@example-app/auth/actions';
-import * as fromAuth from '@example-app/auth/reducers';
+
 import * as fromRoot from '@example-app/reducers';
 import { LayoutActions } from '@example-app/core/actions';
+import { State as AuthState, selectLoggedIn, AuthActions } from '@ngrxdev/example-app/shared/state/auth';
 
 @Component({
   selector: 'bc-app',
@@ -38,13 +38,13 @@ export class AppComponent {
   showSidenav$: Observable<boolean>;
   loggedIn$: Observable<boolean>;
 
-  constructor(private store: Store<fromRoot.State & fromAuth.State>) {
+  constructor(private store: Store<fromRoot.State & AuthState>) {
     /**
      * Selectors can be applied with the `select` operator which passes the state
      * tree to the provided selector
      */
     this.showSidenav$ = this.store.pipe(select(fromRoot.selectShowSidenav));
-    this.loggedIn$ = this.store.pipe(select(fromAuth.selectLoggedIn));
+    this.loggedIn$ = this.store.pipe(select(selectLoggedIn));
   }
 
   closeSidenav() {
