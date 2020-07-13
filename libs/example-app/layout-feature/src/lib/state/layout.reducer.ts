@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 
-import { LayoutActions } from '@example-app/core/actions';
+import * as LayoutActions from './layout.actions';
 import { AuthActions } from '@ngrxdev/example-app/shared/state/auth';
 
 

@@ -41,6 +41,9 @@
       ],
       "@ngrxdev/example-app/shared/components": [
         "libs/example-app/shared/components/src/index.ts"
+      ],
+      "@ngrxdev/example-app/layout-feature": [
+        "libs/example-app/layout-feature/src/index.ts"
       ]
     }
   },

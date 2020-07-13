@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { MaterialModule } from '@example-app/material';
+import { MaterialModule } from './material.module';
 import { ExampleAppSharedStateAuthModule } from '@ngrxdev/example-app/shared/state/auth';
 
 import { LoginPageComponent } from './containers';

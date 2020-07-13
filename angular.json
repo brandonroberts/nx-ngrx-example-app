@@ -395,6 +395,37 @@
         }
       },
       "schematics": {}
+    },
+    "example-app-layout-feature": {
+      "projectType": "library",
+      "root": "libs/example-app/layout-feature",
+      "sourceRoot": "libs/example-app/layout-feature/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/layout-feature/tsconfig.lib.json",
+              "libs/example-app/layout-feature/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/layout-feature/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/layout-feature/jest.config.js",
+            "tsConfig": "libs/example-app/layout-feature/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/layout-feature/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
