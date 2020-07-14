@@ -426,6 +426,68 @@
         }
       },
       "schematics": {}
+    },
+    "example-app-shared-state-user": {
+      "projectType": "library",
+      "root": "libs/example-app/shared/state/user",
+      "sourceRoot": "libs/example-app/shared/state/user/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/shared/state/user/tsconfig.lib.json",
+              "libs/example-app/shared/state/user/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/shared/state/user/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/shared/state/user/jest.config.js",
+            "tsConfig": "libs/example-app/shared/state/user/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/shared/state/user/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "example-app-shared-state-router-state": {
+      "projectType": "library",
+      "root": "libs/example-app/shared/state/router-state",
+      "sourceRoot": "libs/example-app/shared/state/router-state/src",
+      "prefix": "ngrxdev",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/example-app/shared/state/router-state/tsconfig.lib.json",
+              "libs/example-app/shared/state/router-state/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/example-app/shared/state/router-state/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/example-app/shared/state/router-state/jest.config.js",
+            "tsConfig": "libs/example-app/shared/state/router-state/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/example-app/shared/state/router-state/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

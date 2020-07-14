@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from '@ngrxdev/example-app/auth-feature/auth';
-import { NotFoundPageComponent } from '@example-app/core/containers';
+import { NotFoundPageComponent } from './containers';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/books', pathMatch: 'full' },

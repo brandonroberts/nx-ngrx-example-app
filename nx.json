@@ -55,6 +55,12 @@
     },
     "example-app-layout-feature": {
       "tags": []
+    },
+    "example-app-shared-state-user": {
+      "tags": []
+    },
+    "example-app-shared-state-router-state": {
+      "tags": []
     }
   }
 }

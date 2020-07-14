@@ -12,7 +12,7 @@ import * as LoginPageActions from '../actions/login-page.actions';
 import { Credentials } from '@ngrxdev/api-interfaces';
 import { AuthService } from '@ngrxdev/example-app/data-access/auth';
 import { LogoutConfirmationDialogComponent } from '@ngrxdev/example-app/shared/components';
-import { UserActions } from '@example-app/core/actions';
+import { UserActions } from '@ngrxdev/example-app/shared/state/user';
 
 @Injectable()
 export class AuthEffects {

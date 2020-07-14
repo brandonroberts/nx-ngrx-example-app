@@ -44,6 +44,12 @@
       ],
       "@ngrxdev/example-app/layout-feature": [
         "libs/example-app/layout-feature/src/index.ts"
+      ],
+      "@ngrxdev/example-app/shared/state/user": [
+        "libs/example-app/shared/state/user/src/index.ts"
+      ],
+      "@ngrxdev/example-app/shared/state/router-state": [
+        "libs/example-app/shared/state/router-state/src/index.ts"
       ]
     }
   },
