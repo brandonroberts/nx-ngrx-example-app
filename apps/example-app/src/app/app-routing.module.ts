@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthGuard } from '@ngrxdev/example-app/auth-feature/auth';
+import { AuthGuard } from '@ngrxdev/example-app/auth-feature';
 import { NotFoundPageComponent } from './containers';
 
 export const routes: Routes = [

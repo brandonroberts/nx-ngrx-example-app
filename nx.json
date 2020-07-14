@@ -14,7 +14,13 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "build-package", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "build-package",
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
@@ -24,7 +30,9 @@
     },
     "example-app-e2e": {
       "tags": [],
-      "implicitDependencies": ["example-app"]
+      "implicitDependencies": [
+        "example-app"
+      ]
     },
     "api-interfaces": {
       "tags": []
@@ -44,9 +52,6 @@
     "example-app-shared-state-auth": {
       "tags": []
     },
-    "example-app-auth-feature-auth": {
-      "tags": []
-    },
     "example-app-data-access-auth": {
       "tags": []
     },
@@ -60,6 +65,9 @@
       "tags": []
     },
     "example-app-shared-state-router-state": {
+      "tags": []
+    },
+    "example-app-auth-feature": {
       "tags": []
     }
   }
