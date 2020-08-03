@@ -5,15 +5,13 @@ import { Actions } from '@ngrx/effects';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { cold, hot } from 'jasmine-marbles';
 import { Observable, of } from 'rxjs';
-import {
-  LoginPageActions,
-  AuthActions,
-  AuthApiActions,
-} from '@example-app/auth/actions';
 
-import { Credentials, User } from '@example-app/auth/models';
-import { AuthService } from '@example-app/auth/services';
-import { AuthEffects } from '@example-app/auth/effects';
+import { AuthService } from '@ngrxdev/example-app/data-access/auth';
+import { User, Credentials } from '@ngrxdev/api-interfaces';
+
+import { AuthEffects } from './auth.effects';
+import { AuthActions, AuthApiActions, LoginPageActions }from '../actions';
+
 
 describe('AuthEffects', () => {
   let effects: AuthEffects;

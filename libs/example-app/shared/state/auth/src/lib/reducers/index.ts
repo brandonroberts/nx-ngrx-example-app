@@ -4,7 +4,6 @@ import {
   Action,
   combineReducers,
 } from '@ngrx/store';
-import * as fromRoot from '@example-app/reducers';
 import * as fromAuth from './auth.reducer';
 import * as fromLoginPage from './login-page.reducer';
 
@@ -15,7 +14,7 @@ export interface AuthState {
   [fromLoginPage.loginPageFeatureKey]: fromLoginPage.State;
 }
 
-export interface State extends fromRoot.State {
+export interface State {
   [authFeatureKey]: AuthState;
 }
 

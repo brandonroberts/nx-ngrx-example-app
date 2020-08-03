@@ -3,7 +3,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
-import { MaterialModule } from '@example-app/material';
+import { MaterialModule } from '../material.module';
 
 import { selectLoginPagePending, LoginPageActions } from '@ngrxdev/example-app/shared/state/auth';
 

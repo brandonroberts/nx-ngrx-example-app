@@ -16,40 +16,16 @@ exports[`Logout Confirmation Dialog should compile 1`] = `
     class="mat-dialog-actions"
   >
     <button
-      class="mat-focus-indicator mat-button mat-button-base"
       mat-button=""
       type="button"
     >
-      <span
-        class="mat-button-wrapper"
-      >
-        Cancel
-      </span>
-      <div
-        class="mat-button-ripple mat-ripple"
-        matripple=""
-      />
-      <div
-        class="mat-button-focus-overlay"
-      />
+      Cancel
     </button>
     <button
-      class="mat-focus-indicator mat-button mat-button-base"
       mat-button=""
       type="button"
     >
-      <span
-        class="mat-button-wrapper"
-      >
-        OK
-      </span>
-      <div
-        class="mat-button-ripple mat-ripple"
-        matripple=""
-      />
-      <div
-        class="mat-button-focus-overlay"
-      />
+      OK
     </button>
   </mat-dialog-actions>
 </ng-component>
