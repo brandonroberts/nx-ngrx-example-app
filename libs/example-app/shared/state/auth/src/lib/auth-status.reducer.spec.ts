@@ -1,10 +1,10 @@
-import { reducer } from './auth.reducer';
-import * as fromAuth from './auth.reducer';
+import { reducer } from './auth-status.reducer';
+import * as fromAuth from './auth-status.reducer';
 
 import { User } from '@ngrxdev/api-interfaces';
 
-import * as AuthApiActions from '../actions/auth-api.actions';
-import * as AuthActions from '../actions/auth.actions';
+import * as AuthApiActions from './auth-api.actions';
+import * as AuthActions from './auth.actions';
 
 describe('AuthReducer', () => {
   describe('undefined action', () => {

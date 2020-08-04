@@ -5,7 +5,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { MaterialModule } from '../material.module';
 
-import { selectLoginPagePending, LoginPageActions } from '@ngrxdev/example-app/shared/state/auth';
+import { AuthSelectors, LoginPageActions } from '@ngrxdev/example-app/shared/state/auth';
 
 import { LoginPageComponent } from './login-page.component';
 import { LoginFormComponent } from '../components/login-form.component';
@@ -22,7 +22,7 @@ describe('Login Page', () => {
       providers: [
         provideMockStore({
           selectors: [
-            { selector: selectLoginPagePending, value: false },
+            { selector: AuthSelectors.selectLoginPagePending, value: false },
           ],
         }),
       ],

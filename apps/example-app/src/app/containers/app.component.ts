@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 import * as fromRoot from '@example-app/reducers';
 import { LayoutActions, LayoutSelectors } from '@ngrxdev/example-app/layout-feature';
-import { State as AuthState, selectLoggedIn, AuthActions } from '@ngrxdev/example-app/shared/state/auth';
+import { AuthFeature, AuthSelectors, AuthActions } from '@ngrxdev/example-app/shared/state/auth';
 
 @Component({
   selector: 'bc-app',
@@ -38,13 +38,13 @@ export class AppComponent {
   showSidenav$: Observable<boolean>;
   loggedIn$: Observable<boolean>;
 
-  constructor(private store: Store<fromRoot.State & AuthState>) {
+  constructor(private store: Store<fromRoot.State & AuthFeature.State>) {
     /**
      * Selectors can be applied with the `select` operator which passes the state
      * tree to the provided selector
      */
     this.showSidenav$ = this.store.pipe(select(LayoutSelectors.selectShowSidenav));
-    this.loggedIn$ = this.store.pipe(select(selectLoggedIn));
+    this.loggedIn$ = this.store.pipe(select(AuthSelectors.selectLoggedIn));
   }
 
   closeSidenav() {

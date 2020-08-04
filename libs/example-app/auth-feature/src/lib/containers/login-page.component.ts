@@ -3,7 +3,7 @@ import { Store, select } from '@ngrx/store';
 
 import { Credentials } from '@ngrxdev/api-interfaces';
 
-import { LoginPageActions, selectLoginPageError, selectLoginPagePending } from '@ngrxdev/example-app/shared/state/auth';
+import { LoginPageActions, AuthSelectors } from '@ngrxdev/example-app/shared/state/auth';
 
 @Component({
   selector: 'bc-login-page',
@@ -18,8 +18,8 @@ import { LoginPageActions, selectLoginPageError, selectLoginPagePending } from '
   styles: [],
 })
 export class LoginPageComponent implements OnInit {
-  pending$ = this.store.pipe(select(selectLoginPagePending));
-  error$ = this.store.pipe(select(selectLoginPageError));
+  pending$ = this.store.pipe(select(AuthSelectors.selectLoginPagePending));
+  error$ = this.store.pipe(select(AuthSelectors.selectLoginPageError));
 
   constructor(private store: Store) {}
 

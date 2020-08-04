@@ -10,8 +10,9 @@ import { AuthService } from '@ngrxdev/example-app/data-access/auth';
 import { User, Credentials } from '@ngrxdev/api-interfaces';
 
 import { AuthEffects } from './auth.effects';
-import { AuthActions, AuthApiActions, LoginPageActions }from '../actions';
-
+import * as AuthActions from './auth.actions';
+import * as AuthApiActions from './auth-api.actions';
+import * as LoginPageActions from './login-page.actions';
 
 describe('AuthEffects', () => {
   let effects: AuthEffects;

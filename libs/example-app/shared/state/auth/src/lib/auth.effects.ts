@@ -5,9 +5,9 @@ import { Actions, ofType, createEffect } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, exhaustMap, map, tap } from 'rxjs/operators';
 
-import * as AuthApiActions from '../actions/auth-api.actions';
-import * as AuthActions from '../actions/auth.actions';
-import * as LoginPageActions from '../actions/login-page.actions';
+import * as AuthApiActions from './auth-api.actions';
+import * as AuthActions from './auth.actions';
+import * as LoginPageActions from './login-page.actions';
 
 import { Credentials } from '@ngrxdev/api-interfaces';
 import { AuthService } from '@ngrxdev/example-app/data-access/auth';
