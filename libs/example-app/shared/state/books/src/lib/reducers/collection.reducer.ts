@@ -1,10 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
 
-import {
-  CollectionApiActions,
-  CollectionPageActions,
-  SelectedBookPageActions,
-} from '../actions';
+import * as CollectionApiActions from '../collection-api.actions';
+import * as CollectionPageActions from '../collection-page.actions';
+import * as SelectedBookPageActions from '../selected-book-page.actions';
 
 export const collectionFeatureKey = 'collection';
 

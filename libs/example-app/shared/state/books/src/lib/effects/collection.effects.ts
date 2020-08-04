@@ -4,11 +4,9 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { defer, of } from 'rxjs';
 import { catchError, map, mergeMap, switchMap } from 'rxjs/operators';
 
-import {
-  CollectionApiActions,
-  CollectionPageActions,
-  SelectedBookPageActions,
-} from '../actions';
+import * as CollectionApiActions from '../collection-api.actions';
+import * as CollectionPageActions from '../collection-page.actions';
+import * as SelectedBookPageActions from '../selected-book-page.actions';
 import { Book } from '@ngrxdev/api-interfaces';
 import { BookStorageService } from '@ngrxdev/example-app/data-access/books';
 

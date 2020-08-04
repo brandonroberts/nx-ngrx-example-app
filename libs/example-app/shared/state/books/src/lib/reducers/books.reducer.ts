@@ -1,12 +1,10 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
 import { createReducer, on } from '@ngrx/store';
 
-import {
-  BookActions,
-  BooksApiActions,
-  CollectionApiActions,
-  ViewBookPageActions,
-} from '../actions';
+import * as BookActions from '../book.actions';
+import * as BooksApiActions from '../books-api.actions';
+import * as CollectionApiActions from '../collection-api.actions';
+import * as ViewBookPageActions from '../view-book-page.actions';
 import { Book } from '@ngrxdev/api-interfaces';
 
 export const booksFeatureKey = 'books';
